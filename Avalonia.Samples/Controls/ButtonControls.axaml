@@ -6,6 +6,7 @@
         x:Class="Controls.ButtonControls"
         Title="ButtonControls">
 
+
   <StackPanel Orientation="Vertical">
 
       <TextBlock x:Name="textBlockMessage" Margin="20 20" />
@@ -48,6 +49,45 @@
         </SplitButton.Flyout>
       </SplitButton>
 
+
+      <!-- Color-Selection example -->
+      
+        <!-- We have the following DataTemplate defined -->
+        <DataTemplate DataType="Color">
+          <Border CornerRadius="4" Width="20" Height="20" BorderBrush="Gray" BorderThickness="1">
+            <Border.Background>
+              <SolidColorBrush Color="{Binding}" />
+            </Border.Background>
+          </Border>
+        </DataTemplate>
+
+        <!-- SelectedColor, ChangeColorCommand and AvailableColors are properties of our ViewModel -->
+        <SplitButton Content="{Binding SelectedColor}" Command="{Binding ChangeColorCommand}">
+          <SplitButton.Flyout>
+            <Flyout Placement="Bottom">
+              <ListBox ItemsSource="{Binding AvailableColors}" SelectedItem="{Binding SelectedColor}" Height="200" Width="200">
+                <ListBox.ItemsPanel>
+                  <ItemsPanelTemplate>
+                    <WrapPanel />
+                  </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+              </ListBox>
+            </Flyout>
+          </SplitButton.Flyout>
+        </SplitButton>
+
+
+      <!-- Export button Sample -->
+
+      <SplitButton Content="Export to PDF" Command="{Binding ExportCommand}" CommandParameter=".pdf">
+          <SplitButton.Flyout>
+              <MenuFlyout Placement="RightEdgeAlignedTop"> 
+                  <MenuItem Header="Export to PNG" Command="{Binding ExportCommand}" CommandParameter=".png" />
+                  <MenuItem Header="Export to JPG" Command="{Binding ExportCommand}" CommandParameter=".jpg" />
+              </MenuFlyout>
+          </SplitButton.Flyout>
+      </SplitButton>
+      
   </StackPanel>
 
 </Window>
