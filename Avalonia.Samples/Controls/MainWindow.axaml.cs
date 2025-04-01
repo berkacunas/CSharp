@@ -10,14 +10,21 @@ public partial class MainWindow : Window
         InitializeComponent();
     }
 
-    async public void buttonOpenModalWindow_Click(object sender, RoutedEventArgs e)
+    async public void buttonModalWindow_Click(object sender, RoutedEventArgs e)
     {
-        textBlockMessage.Text = "Button clicked!";
+        textBlockMessage.Text = "Modal Window opened.";
 
-        var ownerWindow = this;
         var window = new ModalWindow();
-        var result = await window.ShowDialog<string>(ownerWindow);
+        var result = await window.ShowDialog<string>(this);
 
         textBlockMessage.Text = result;
+    }
+
+    public void buttonButtonControls_Click(object sender, RoutedEventArgs e)
+    {
+        textBlockMessage.Text = "ButtonControls window opened.";
+
+        var window = new ButtonControls();
+        window.ShowDialog(this);
     }
 }
