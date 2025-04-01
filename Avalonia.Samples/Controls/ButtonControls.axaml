@@ -6,12 +6,14 @@
         x:Class="Controls.ButtonControls"
         Title="ButtonControls">
 
-  <StackPanel>
+  <StackPanel Orientation="Vertical">
 
       <TextBlock x:Name="textBlockMessage" Margin="20 20" />
       
+      <!-- ButtonSpinner Example -->
       <ButtonSpinner x:Name="buttonSpinner" Height="20" Width="130" ButtonSpinnerLocation="Left" Spin="buttonSpinner_Spin" />
 
+      <!-- RadioButton Example -->
       <StackPanel Margin="20">
         <TextBlock Margin="0 10 0 5">First Group</TextBlock>
           <RadioButton GroupName="First Group" Content="First Option" Checked="radioButton_Checked" />
@@ -23,12 +25,28 @@
           <RadioButton GroupName="Second Group" Checked="radioButton_Checked" />
       </StackPanel>
 
+      <!-- RepeatButton Example -->
       <Grid Margin="20" RowDefinitions="50,*">
         <RepeatButton x:Name="repeatButton" Grid.Row="0" Click="repeatButton_Click">Press and hold down</RepeatButton>
         <ScrollViewer Grid.Row="1">
           <TextBlock  Margin="0 10" x:Name="repeatButtonMessage">Ready...</TextBlock>
         </ScrollViewer>
       </Grid>
+
+      <!-- Basic SplitButton Example -->
+      <SplitButton x:Name="splitButton" Content="Content" >
+        <SplitButton.Flyout>
+          <MenuFlyout Placement="Bottom">
+            <MenuItem Header="Item 1">
+              <MenuItem Header="Subitem 1" Click="splitButton_Click" />
+              <MenuItem Header="Subitem 2" Click="splitButton_Click" />
+              <MenuItem Header="Subitem 3" Click="splitButton_Click" />
+            </MenuItem>
+            <MenuItem Header="Item 2" InputGesture="Ctrl+A" Click="splitButton_Click" />
+            <MenuItem Header="Item 3" Click="splitButton_Click" />
+          </MenuFlyout>
+        </SplitButton.Flyout>
+      </SplitButton>
 
   </StackPanel>
 
