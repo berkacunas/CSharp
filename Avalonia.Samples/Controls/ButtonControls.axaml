@@ -8,9 +8,9 @@
 
   <StackPanel>
 
-      <TextBlock Name="textBlockMessage" Margin="20 20" />
+      <TextBlock x:Name="textBlockMessage" Margin="20 20" />
       
-      <ButtonSpinner Name="buttonSpinner" Height="20" Width="130" ButtonSpinnerLocation="Left" Spin="buttonSpinner_Spin" />
+      <ButtonSpinner x:Name="buttonSpinner" Height="20" Width="130" ButtonSpinnerLocation="Left" Spin="buttonSpinner_Spin" />
 
       <StackPanel Margin="20">
         <TextBlock Margin="0 10 0 5">First Group</TextBlock>
@@ -22,6 +22,13 @@
           <RadioButton GroupName="Second Group" Content="Fourth Option" Checked="radioButton_Checked" />
           <RadioButton GroupName="Second Group" Checked="radioButton_Checked" />
       </StackPanel>
+
+      <Grid Margin="20" RowDefinitions="50,*">
+        <RepeatButton x:Name="repeatButton" Grid.Row="0" Click="repeatButton_Click">Press and hold down</RepeatButton>
+        <ScrollViewer Grid.Row="1">
+          <TextBlock  Margin="0 10" x:Name="repeatButtonMessage">Ready...</TextBlock>
+        </ScrollViewer>
+      </Grid>
 
   </StackPanel>
 

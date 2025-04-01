@@ -9,7 +9,7 @@
     <StackPanel Margin="20">
         <Button x:Name="buttonModalWindow" Click="buttonModalWindow_Click">Open Modal Window</Button>
         <Button x:Name="buttonButtonControls" Click="buttonButtonControls_Click">Open Button Controls</Button>
-        <TextBlock Margin="0 10" x:Name="textBlockMessage">Ready...</TextBlock>
+        <TextBlock x:Name="textBlockMessage" Margin="0 10">Ready...</TextBlock>
     </StackPanel>
 
 </Window>

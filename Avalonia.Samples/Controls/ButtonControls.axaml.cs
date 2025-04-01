@@ -1,5 +1,4 @@
 using Avalonia.Controls;
-using Avalonia.Controls.Primitives;
 using Avalonia.Interactivity;
 
 namespace Controls;
@@ -27,5 +26,10 @@ public partial class ButtonControls : Window
 
         RadioButton? radioButton = e.Source as RadioButton;
         this.textBlockMessage.Text = (radioButton.Content != null) ? radioButton.Content.ToString() : "Empty";
+    }
+
+    public void repeatButton_Click(object sender, RoutedEventArgs e)
+    {
+        this.repeatButtonMessage.Text += "\rButton clicked!";
     }
 }
