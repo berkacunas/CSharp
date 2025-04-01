@@ -6,6 +6,23 @@
         x:Class="Controls.ButtonControls"
         Title="ButtonControls">
 
-  <ButtonSpinner Name="buttonSpinner" Height="20" Width="130" ButtonSpinnerLocation="Left" Spin="buttonSpinner_Spin" />
+  <StackPanel>
+
+      <TextBlock Name="textBlockMessage" Margin="20 20" />
+      
+      <ButtonSpinner Name="buttonSpinner" Height="20" Width="130" ButtonSpinnerLocation="Left" Spin="buttonSpinner_Spin" />
+
+      <StackPanel Margin="20">
+        <TextBlock Margin="0 10 0 5">First Group</TextBlock>
+          <RadioButton GroupName="First Group" Content="First Option" Checked="radioButton_Checked" />
+          <RadioButton GroupName="First Group" Content="Second Option" Checked="radioButton_Checked" />
+          <RadioButton IsEnabled="False" GroupName="First Group" Content="Third Option" Checked="radioButton_Checked" />
+
+        <TextBlock Margin="0 10 0 5">Second Group</TextBlock> 
+          <RadioButton GroupName="Second Group" Content="Fourth Option" Checked="radioButton_Checked" />
+          <RadioButton GroupName="Second Group" Content="Fifth Option" Checked="radioButton_Checked" />
+      </StackPanel>
+
+  </StackPanel>
 
 </Window>
