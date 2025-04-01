@@ -22,14 +22,10 @@ public partial class ButtonControls : Window
 
     public void radioButton_Checked(object sender, RoutedEventArgs e)
     {
-        RadioButton? obj = e.Source as RadioButton;
-
-        if (obj == null)
+        if (e.Source == null)
             return;
 
-        if (obj.Content == null)
-            return;
-
-        textBlockMessage.Text = obj.Content.ToString();
+        RadioButton? radioButton = e.Source as RadioButton;
+        this.textBlockMessage.Text = (radioButton.Content != null) ? radioButton.Content.ToString() : "Empty";
     }
 }

@@ -20,7 +20,7 @@
 
         <TextBlock Margin="0 10 0 5">Second Group</TextBlock> 
           <RadioButton GroupName="Second Group" Content="Fourth Option" Checked="radioButton_Checked" />
-          <RadioButton GroupName="Second Group" Content="Fifth Option" Checked="radioButton_Checked" />
+          <RadioButton GroupName="Second Group" Checked="radioButton_Checked" />
       </StackPanel>
 
   </StackPanel>
