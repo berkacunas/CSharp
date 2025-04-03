@@ -49,20 +49,22 @@
         </SplitButton.Flyout>
       </SplitButton>
 
+    <!-- Fix and uncomment SplitButton codes when I learn Command Binding -->
 
       <!-- Color-Selection example -->
       
         <!-- We have the following DataTemplate defined -->
-        <DataTemplate DataType="Color">
+        <!-- <DataTemplate DataType="Color">
           <Border CornerRadius="4" Width="20" Height="20" BorderBrush="Gray" BorderThickness="1">
             <Border.Background>
               <SolidColorBrush Color="{Binding}" />
             </Border.Background>
           </Border>
-        </DataTemplate>
+        </DataTemplate> -->
 
         <!-- SelectedColor, ChangeColorCommand and AvailableColors are properties of our ViewModel -->
-        <SplitButton Content="{Binding SelectedColor}" Command="{Binding ChangeColorCommand}">
+
+        <!-- <SplitButton Content="{Binding SelectedColor}" Command="{Binding ChangeColorCommand}">
           <SplitButton.Flyout>
             <Flyout Placement="Bottom">
               <ListBox ItemsSource="{Binding AvailableColors}" SelectedItem="{Binding SelectedColor}" Height="200" Width="200">
@@ -74,20 +76,33 @@
               </ListBox>
             </Flyout>
           </SplitButton.Flyout>
-        </SplitButton>
-
+        </SplitButton> -->
 
       <!-- Export button Sample -->
 
-      <SplitButton Content="Export to PDF" Command="{Binding ExportCommand}" CommandParameter=".pdf">
+      <!-- <SplitButton Content="Export to PDF" Command="{Binding ExportCommand}" CommandParameter=".pdf">
           <SplitButton.Flyout>
               <MenuFlyout Placement="RightEdgeAlignedTop"> 
                   <MenuItem Header="Export to PNG" Command="{Binding ExportCommand}" CommandParameter=".png" />
                   <MenuItem Header="Export to JPG" Command="{Binding ExportCommand}" CommandParameter=".jpg" />
               </MenuFlyout>
           </SplitButton.Flyout>
-      </SplitButton>
-      
+      </SplitButton> -->
+    <!-- ***************************************************************** -->
+    
+    <!-- ToogleButton Audio Speaker On/Off Example -->
+
+      <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock Margin="0 5">Audio</TextBlock>
+        <ToggleButton IsChecked="True">
+          <Panel>
+            <PathIcon Classes="audio-on" Data="{StaticResource speaker_regular}" />
+            <PathIcon Classes="audio-mute" Data="{StaticResource speaker_off_regular}" />
+          </Panel>
+        </ToggleButton>
+      </StackPanel>
+
+
   </StackPanel>
 
 </Window>
