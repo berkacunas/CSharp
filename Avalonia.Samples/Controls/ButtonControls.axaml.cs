@@ -45,14 +45,19 @@ public partial class ButtonControls : Window
         switch (header) 
         {
             case "Subitem 1":
+                this.textBlockMessage.Text = "Subitem 1";
                 break;
             case "Subitem 2":
+                this.textBlockMessage.Text = "Subitem 2";
                 break;
             case "Subitem 3":
+                this.textBlockMessage.Text = "Subitem 3";
                 break;
             case "Item 2":
+                this.textBlockMessage.Text = "Item 2";
                 break;
             case "Item 3":
+                this.textBlockMessage.Text = "Item 3";
                 break;
             default:
                 throw new ArgumentException("MenuItem Header value error !");

@@ -7,20 +7,7 @@
     </Border>
   </Design.PreviewWith>
 
-  <Window.Styles>
-    <Style Selector="ToggleButton PathIcon.audio-on">
-      <Setter Property="IsVisible" Value="False"/>
-    </Style>
-    <Style Selector="ToggleButton:checked PathIcon.audio-on">
-      <Setter Property="IsVisible" Value="True"/>
-    </Style>
-    <Style Selector="ToggleButton PathIcon.audio-mute">
-      <Setter Property="IsVisible" Value="True"/>
-    </Style>
-    <Style Selector="ToggleButton:checked PathIcon.audio-mute">
-      <Setter Property="IsVisible" Value="False"/>
-    </Style>
-  </Window.Styles>
+  <!--  -->
 
   <Style>
     <Style.Resources>

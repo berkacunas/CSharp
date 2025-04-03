@@ -1,9 +1,8 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="using:AvaloniaControls"
+             xmlns:local="using:Controls"
              x:Class="Controls.App">    
     <Application.Styles>
-        <FluentTheme Mode="Light"/>
-        <StyleInclude Source="avares://AvaloniaControls/Icons.axaml" />
+        <FluentTheme/>
     </Application.Styles>
 </Application>
